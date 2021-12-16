@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "mIk51b88Sp8ThaN6FZesnW7NkOkQZAZ0FVQK4gHxmlc7aBy8rih/0DIdpQDjqvbqLAoX/7DOIpC48KTzkc8AWA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fernandoaffonso\\Desktop\\Pessoal\\MonoGame\\Aprendendo MonoGame\\Projeto PONG\\AprendendoMonogame_1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fernandoaffonso\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\fernandoaffonso\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+  ],
+  "logs": []
+}
