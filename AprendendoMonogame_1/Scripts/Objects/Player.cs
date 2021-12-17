@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Input;
 
 using AprendendoMonogame_1.Scripts.General;
+using System;
 
 namespace AprendendoMonogame_1.Scripts.Objects
 {
@@ -11,7 +12,10 @@ namespace AprendendoMonogame_1.Scripts.Objects
         public Input Input;
 
         // Atributes
-        public float Speed = 0f;
+        public float Speed = 100f;
+
+        public float RotationVelocity = 3f;
+        public float LinearVelocity = 4f;
 
         public override void Update(GameTime gameTime)
         {
@@ -27,29 +31,47 @@ namespace AprendendoMonogame_1.Scripts.Objects
                 return;
             }
 
+            // Basic Movement (Traditional top view eight movement)
+            //if (Keyboard.GetState().IsKeyDown(Input.Up))
+            //{
+            //    // Up
+            //    Position.Y -= Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            //}
+            //if (Keyboard.GetState().IsKeyDown(Input.Down))
+            //{
+            //    // Down
+            //    Position.Y += Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            //}
+            //if (Keyboard.GetState().IsKeyDown(Input.Left))
+            //{
+            //    // Left
+            //    Position.X -= Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            //}
+            //if (Keyboard.GetState().IsKeyDown(Input.Right))
+            //{
+            //    // Right
+            //    Position.X += Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            //}
 
-            if (Keyboard.GetState().IsKeyDown(Input.Up))
+            // Rotation
+            if(Keyboard.GetState().IsKeyDown(Input.RotateLeft))
             {
-                // Up
-                Position.Y -= Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                Rotation -= MathHelper.ToRadians(RotationVelocity);
             }
-            if (Keyboard.GetState().IsKeyDown(Input.Down))
+            else if(Keyboard.GetState().IsKeyDown(Input.RotateRight))
             {
-                // Down
-                Position.Y += Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-            if (Keyboard.GetState().IsKeyDown(Input.Left))
-            {
-                // Left
-                Position.X -= Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-            if (Keyboard.GetState().IsKeyDown(Input.Right))
-            {
-                // Right
-                Position.X += Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                Rotation += MathHelper.ToRadians(RotationVelocity);
             }
 
-            if (ContainType == Object2D.ContainTypes.Contain)
+            // Basic Movement (Traditional asteroid game movement)
+            var direction = new Vector2((float)Math.Cos(Rotation), (float)Math.Sin(Rotation));
+
+            if(Keyboard.GetState().IsKeyDown(Input.Up))
+            {
+                Position += direction * LinearVelocity;
+            }
+
+            if (ContainType == ContainTypes.Contain)
             {
                 // Checking the X
                 if (Position.X > Game1._graphics.PreferredBackBufferWidth - Texture.Width * Scale.X / 2)
@@ -63,7 +85,7 @@ namespace AprendendoMonogame_1.Scripts.Objects
                 else if (Position.Y < Texture.Height * Scale.Y / 2)
                     Position.Y = Texture.Height * Scale.Y / 2;
             }
-            else if (ContainType == Object2D.ContainTypes.Warp)
+            else if (ContainType == ContainTypes.Warp)
             {
                 // Checking the X
                 if (Position.X > Game1._graphics.PreferredBackBufferWidth - Texture.Width * Scale.X / 2)

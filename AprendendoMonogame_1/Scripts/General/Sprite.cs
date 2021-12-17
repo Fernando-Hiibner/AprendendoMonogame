@@ -3,15 +3,10 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace AprendendoMonogame_1.Scripts.General
 {
-    public class Sprite
+    public class Sprite : Transform2D
     {
-        // Transform related
-        public Vector2 Position = Vector2.Zero;
-        public float Rotation = 0f;
-
         // Texture related
         public Texture2D Texture;
-        public Vector2 Scale = Vector2.One;
         public Pivot PivotPoint;
         public Color ColorBlend = Color.White;
 

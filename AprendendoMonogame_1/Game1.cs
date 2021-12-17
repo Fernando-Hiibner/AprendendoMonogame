@@ -58,15 +58,20 @@ namespace AprendendoMonogame_1
                     Speed = 200f,
                     ContainType = Object2D.ContainTypes.Contain,
 
-                    Texture = Game1.DefaultTextures.Triangle,
+                    Texture = DefaultTextures.Triangle,
                     ColorBlend = Color.Red,
 
                     Input = new Input()
                     {
+                        // Movement
                         Up = Keys.W,
                         Down = Keys.S,
                         Left = Keys.A,
                         Right = Keys.D,
+
+                        // Rotation
+                        RotateLeft = Keys.Q,
+                        RotateRight = Keys.E,
                     }
                 },
                 new Player()
@@ -76,15 +81,20 @@ namespace AprendendoMonogame_1
                     Speed = 30f,
                     ContainType = Object2D.ContainTypes.Warp,
 
-                    Texture = Game1.DefaultTextures.Circle,
+                    Texture = DefaultTextures.Circle,
                     ColorBlend = Color.Green,
 
                     Input = new Input()
                     {
-                        Up = Keys.Up,
-                        Down = Keys.Down,
-                        Left = Keys.Left,
-                        Right = Keys.Right,
+                        // Movement
+                        Up = Keys.I,
+                        Down = Keys.K,
+                        Left = Keys.J,
+                        Right = Keys.L,
+
+                        // Rotation
+                        RotateLeft = Keys.U,
+                        RotateRight = Keys.O,
                     }
                 },
             };
