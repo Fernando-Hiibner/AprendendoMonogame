@@ -4,9 +4,13 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/fernandoaffonso/Desktop/Pessoal/MonoGame/Aprendendo MonoGame/AprendendoMonogame_1/Content/Sprites/Defaults/DefaultCircle.png</File>
     <File>C:/Users/fernandoaffonso/Desktop/Pessoal/MonoGame/Aprendendo MonoGame/AprendendoMonogame_1/Content/Sprites/Defaults/DefaultTexture.png</File>
+    <File>C:/Users/fernandoaffonso/Desktop/Pessoal/MonoGame/Aprendendo MonoGame/AprendendoMonogame_1/Content/Sprites/Defaults/DefaultTriangle.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File>Sprites/Defaults/DefaultSquare.png</File>
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

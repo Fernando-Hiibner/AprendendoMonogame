@@ -24,7 +24,6 @@ C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\Projeto PO
 C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\Projeto PONG\obj\Debug\netcoreapp3.1\AprendendoMonogame_1.pdb
 C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\Projeto PONG\obj\Debug\netcoreapp3.1\AprendendoMonogame_1.genruntimeconfig.cache
 C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\bin\Debug\netcoreapp3.1\Content\Sprites\Defaults\DefaultTexture.xnb
-C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\bin\Debug\netcoreapp3.1\Content\Sprites\Placeholders\DefaultTexture.xnb
 C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\bin\Debug\netcoreapp3.1\AprendendoMonogame_1.exe
 C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\bin\Debug\netcoreapp3.1\AprendendoMonogame_1.deps.json
 C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\bin\Debug\netcoreapp3.1\AprendendoMonogame_1.runtimeconfig.json
@@ -49,3 +48,6 @@ C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\Aprendendo
 C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\obj\Debug\netcoreapp3.1\AprendendoMonogame_1.pdb
 C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\obj\Debug\netcoreapp3.1\AprendendoMonogame_1.genruntimeconfig.cache
 C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\obj\Debug\netcoreapp3.1\AprendendoMonogame_1.csproj.AssemblyReference.cache
+C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\bin\Debug\netcoreapp3.1\Content\Sprites\Defaults\DefaultCircle.xnb
+C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\bin\Debug\netcoreapp3.1\Content\Sprites\Defaults\DefaultSquare.xnb
+C:\Users\fernandoaffonso\Desktop\Pessoal\MonoGame\Aprendendo MonoGame\AprendendoMonogame_1\bin\Debug\netcoreapp3.1\Content\Sprites\Defaults\DefaultTriangle.xnb

@@ -5,7 +5,7 @@ using AprendendoMonogame_1.Scripts.General;
 
 namespace AprendendoMonogame_1.Scripts.Objects
 {
-    public class Player : Object
+    public class Player : Object2D
     {
         // Controller related
         public Input Input;
@@ -49,33 +49,33 @@ namespace AprendendoMonogame_1.Scripts.Objects
                 Position.X += Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
 
-            if (ContainType == Object.ContainTypes.Contain)
+            if (ContainType == Object2D.ContainTypes.Contain)
             {
                 // Checking the X
-                if (Position.X > Game1._graphics.PreferredBackBufferWidth - Sprite.Texture.Width * Sprite.Scale.X / 2)
-                    Position.X = Game1._graphics.PreferredBackBufferWidth - Sprite.Texture.Width * Sprite.Scale.X / 2;
-                else if (Position.X < Sprite.Texture.Width * Sprite.Scale.X / 2)
-                    Position.X = Sprite.Texture.Width * Sprite.Scale.X / 2;
+                if (Position.X > Game1._graphics.PreferredBackBufferWidth - Texture.Width * Scale.X / 2)
+                    Position.X = Game1._graphics.PreferredBackBufferWidth - Texture.Width * Scale.X / 2;
+                else if (Position.X < Texture.Width * Scale.X / 2)
+                    Position.X = Texture.Width * Scale.X / 2;
 
                 // Checking the Y
-                if (Position.Y > Game1._graphics.PreferredBackBufferHeight - Sprite.Texture.Height * Sprite.Scale.Y / 2)
-                    Position.Y = Game1._graphics.PreferredBackBufferHeight - Sprite.Texture.Height * Sprite.Scale.Y / 2;
-                else if (Position.Y < Sprite.Texture.Height * Sprite.Scale.Y / 2)
-                    Position.Y = Sprite.Texture.Height * Sprite.Scale.Y / 2;
+                if (Position.Y > Game1._graphics.PreferredBackBufferHeight - Texture.Height * Scale.Y / 2)
+                    Position.Y = Game1._graphics.PreferredBackBufferHeight - Texture.Height * Scale.Y / 2;
+                else if (Position.Y < Texture.Height * Scale.Y / 2)
+                    Position.Y = Texture.Height * Scale.Y / 2;
             }
-            else if (ContainType == Object.ContainTypes.Warp)
+            else if (ContainType == Object2D.ContainTypes.Warp)
             {
                 // Checking the X
-                if (Position.X > Game1._graphics.PreferredBackBufferWidth - Sprite.Texture.Width * Sprite.Scale.X / 2)
-                    Position.X = Sprite.Texture.Width * Sprite.Scale.X / 2;
-                else if (Position.X < Sprite.Texture.Width * Sprite.Scale.X / 2)
-                    Position.X = Game1._graphics.PreferredBackBufferWidth - Sprite.Texture.Width * Sprite.Scale.X / 2;
+                if (Position.X > Game1._graphics.PreferredBackBufferWidth - Texture.Width * Scale.X / 2)
+                    Position.X = Texture.Width * Scale.X / 2;
+                else if (Position.X < Texture.Width * Scale.X / 2)
+                    Position.X = Game1._graphics.PreferredBackBufferWidth - Texture.Width * Scale.X / 2;
 
                 // Checking the Y
-                if (Position.Y > Game1._graphics.PreferredBackBufferHeight - Sprite.Texture.Height * Sprite.Scale.Y / 2)
-                    Position.Y = Sprite.Texture.Height * Sprite.Scale.Y / 2;
-                else if (Position.Y < Sprite.Texture.Height * Sprite.Scale.Y / 2)
-                    Position.Y = Game1._graphics.PreferredBackBufferHeight - Sprite.Texture.Height * Sprite.Scale.Y / 2;
+                if (Position.Y > Game1._graphics.PreferredBackBufferHeight - Texture.Height * Scale.Y / 2)
+                    Position.Y = Texture.Height * Scale.Y / 2;
+                else if (Position.Y < Texture.Height * Scale.Y / 2)
+                    Position.Y = Game1._graphics.PreferredBackBufferHeight - Texture.Height * Scale.Y / 2;
             }
         }
     }

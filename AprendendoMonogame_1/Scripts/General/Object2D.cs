@@ -4,16 +4,10 @@ using System;
 
 namespace AprendendoMonogame_1.Scripts.General
 {
-    public class Object
+    public class Object2D : Sprite
     {
         // Identification related
         public string Alias = "UNNAMED OBJECT";
-
-        // Texture related
-        public Sprite Sprite = new Sprite();
-
-        // Transform related
-        public Vector2 Position = Vector2.Zero;
 
         // Colision and Physics
         public enum ContainTypes
@@ -27,11 +21,6 @@ namespace AprendendoMonogame_1.Scripts.General
         public virtual void Update(GameTime gameTime)
         {
 
-        }
-
-        public void Draw()
-        {
-            Sprite.Draw(Position);
         }
     }
 }

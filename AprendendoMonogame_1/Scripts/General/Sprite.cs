@@ -5,6 +5,10 @@ namespace AprendendoMonogame_1.Scripts.General
 {
     public class Sprite
     {
+        // Transform related
+        public Vector2 Position = Vector2.Zero;
+        public float Rotation = 0f;
+
         // Texture related
         public Texture2D Texture;
         public Vector2 Scale = Vector2.One;
@@ -13,7 +17,7 @@ namespace AprendendoMonogame_1.Scripts.General
 
         public Sprite()
         {
-            Texture = Game1.DefaultSquareTexture;
+            Texture = Game1.DefaultTextures.Square;
             PivotPoint = new Pivot(new Vector2(Texture.Width, Texture.Height));
         }
         public Sprite(Texture2D _texture)
@@ -23,7 +27,7 @@ namespace AprendendoMonogame_1.Scripts.General
         }
         public Sprite(Vector2 customPivot)
         {
-            Texture = Game1.DefaultSquareTexture;
+            Texture = Game1.DefaultTextures.Square;
             PivotPoint = new Pivot(new Vector2(Texture.Width, Texture.Height), customPivot);
         }
         public Sprite(Texture2D _texture, Vector2 customPivot)
@@ -32,9 +36,9 @@ namespace AprendendoMonogame_1.Scripts.General
             PivotPoint = new Pivot(new Vector2(Texture.Width, Texture.Height), customPivot);
         }
 
-        public void Draw(Vector2 Position)
+        public void Draw()
         {
-            Game1._spriteBatch.Draw(Texture, Position, null, ColorBlend, 0f, PivotPoint.Center, Scale, SpriteEffects.None, 0f);
+            Game1._spriteBatch.Draw(Texture, Position, null, ColorBlend, Rotation, PivotPoint.Center, Scale, SpriteEffects.None, 0f);
         }
     }
 }
