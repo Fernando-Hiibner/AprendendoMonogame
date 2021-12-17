@@ -4,8 +4,8 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/fernandoaffonso/Desktop/Pessoal/MonoGame/Aprendendo MonoGame/Projeto PONG/Content/Sprites/Placeholders/DefaultTexture.png</File>
-    <File>C:/Users/fernandoaffonso/Desktop/Pessoal/MonoGame/Aprendendo MonoGame/Projeto PONG/Content/Sprites/Placeholders/PlaceholderGroundTile.png</File>
+    <File>C:/Users/fernandoaffonso/Desktop/Pessoal/MonoGame/Aprendendo MonoGame/AprendendoMonogame_1/Content/Sprites/Placeholders/DefaultTexture.png</File>
+    <File>C:/Users/fernandoaffonso/Desktop/Pessoal/MonoGame/Aprendendo MonoGame/AprendendoMonogame_1/Content/Sprites/Placeholders/PlaceholderGroundTile.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

@@ -181,11 +181,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fernandoaffonso\\Desktop\\Pessoal\\MonoGame\\Aprendendo MonoGame\\Projeto PONG\\AprendendoMonogame_1.csproj",
+      "projectUniqueName": "C:\\Users\\fernandoaffonso\\Desktop\\Pessoal\\MonoGame\\Aprendendo MonoGame\\AprendendoMonogame_1\\AprendendoMonogame_1.csproj",
       "projectName": "AprendendoMonogame_1",
-      "projectPath": "C:\\Users\\fernandoaffonso\\Desktop\\Pessoal\\MonoGame\\Aprendendo MonoGame\\Projeto PONG\\AprendendoMonogame_1.csproj",
+      "projectPath": "C:\\Users\\fernandoaffonso\\Desktop\\Pessoal\\MonoGame\\Aprendendo MonoGame\\AprendendoMonogame_1\\AprendendoMonogame_1.csproj",
       "packagesPath": "C:\\Users\\fernandoaffonso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fernandoaffonso\\Desktop\\Pessoal\\MonoGame\\Aprendendo MonoGame\\Projeto PONG\\obj\\",
+      "outputPath": "C:\\Users\\fernandoaffonso\\Desktop\\Pessoal\\MonoGame\\Aprendendo MonoGame\\AprendendoMonogame_1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

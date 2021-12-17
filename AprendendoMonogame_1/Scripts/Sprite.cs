@@ -12,6 +12,7 @@ namespace AprendendoMonegame_1.Scripts
         // Texture related
         public Texture2D Texture;
         public Vector2 Scale = Vector2.One;
+        public Pivot PivotPoint;
         public Color ColorBlend = Color.White;
 
         // Transform related
@@ -33,6 +34,12 @@ namespace AprendendoMonegame_1.Scripts
         public Sprite(Texture2D _texture)
         {
             Texture = _texture;
+            PivotPoint = new Pivot(new Vector2(_texture.Width, _texture.Height));
+        }
+        public Sprite(Texture2D _texture, Vector2 customPivot)
+        {
+            Texture = _texture;
+            PivotPoint = new Pivot(new Vector2(_texture.Width, _texture.Height), customPivot);
         }
 
         public void Update(GameTime gameTime)
@@ -101,7 +108,7 @@ namespace AprendendoMonegame_1.Scripts
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(Texture, Position, null, ColorBlend, 0f, new Vector2(Texture.Width / 2, Texture.Height / 2), Scale, SpriteEffects.None, 0f);
+            spriteBatch.Draw(Texture, Position, null, ColorBlend, 0f, PivotPoint.Center, Scale, SpriteEffects.None, 0f);
         }
     }
 }
