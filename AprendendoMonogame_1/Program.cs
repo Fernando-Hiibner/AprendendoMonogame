@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AprendendoMonegame_1
+namespace AprendendoMonogame_1
 {
     public static class Program
     {

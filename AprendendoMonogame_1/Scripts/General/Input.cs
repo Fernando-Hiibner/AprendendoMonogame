@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace AprendendoMonegame_1.Scripts
+namespace AprendendoMonogame_1.Scripts.General
 {
     public class Input
     {

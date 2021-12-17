@@ -1,19 +1,26 @@
-﻿using Microsoft.Xna.Framework;
+﻿// XNA Namespaces
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Graphics;
 
+// Others Namespaces
 using System.Collections.Generic;
 
-using AprendendoMonegame_1.Scripts;
+// Project Namespaces
+using AprendendoMonogame_1.Scripts.General;
+using AprendendoMonogame_1.Scripts.Objects;
 
-namespace AprendendoMonegame_1
+namespace AprendendoMonogame_1
 {
     public class Game1 : Game
     {
         public static GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
-        
-        private List<Sprite> instanceManager;
+        public static SpriteBatch _spriteBatch;
+
+        // Default Contents
+        public static Texture2D DefaultSquareTexture;
+
+        private List<Object> instanceManager;
 
         public Game1()
         {
@@ -34,44 +41,50 @@ namespace AprendendoMonegame_1
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // Load Contents
-            Texture2D defaultTexture = Content.Load<Texture2D>("Sprites/Placeholders/DefaultTexture");
-
+            DefaultSquareTexture = Content.Load<Texture2D>("Sprites/Defaults/DefaultTexture");
 
             // Instantiate items
-            instanceManager = new List<Sprite>()
+            instanceManager = new List<Object>()
             {
-                new Sprite(defaultTexture)
+                new Player()
                 {
-                    Alias = "Quadrado Branco",
+                    Alias = "Player 1",
 
                     Speed = 200f,
-                    ContainType = Sprite.ContainTypes.Contain,
+                    ContainType = Object.ContainTypes.Contain,
+
+                    Sprite = new Sprite()
+                    {
+                        ColorBlend = Color.Red
+                    },
 
                     Input = new Input()
                     {
                         Up = Keys.W,
                         Down = Keys.S,
                         Left = Keys.A,
-                        Right = Keys.D
-                    },
+                        Right = Keys.D,
+                    }
                 },
-                new Sprite(defaultTexture)
+                new Player()
                 {
-                    Alias = "Quadrado Vermelho",
+                    Alias = "Player 2",
 
-                    ColorBlend = Color.Red,
-
-                    Position = new Vector2(16, 0),
                     Speed = 30f,
-                    ContainType = Sprite.ContainTypes.Warp,
+                    ContainType = Object.ContainTypes.Warp,
+
+                    Sprite = new Sprite()
+                    {
+                        ColorBlend = Color.Green
+                    },
 
                     Input = new Input()
                     {
                         Up = Keys.Up,
                         Down = Keys.Down,
                         Left = Keys.Left,
-                        Right = Keys.Right
-                    },
+                        Right = Keys.Right,
+                    }
                 },
             };
 
@@ -80,9 +93,9 @@ namespace AprendendoMonegame_1
 
         protected override void Update(GameTime gameTime)
         {
-            foreach(Sprite sprite in instanceManager)
+            foreach (Object obj in instanceManager)
             {
-                sprite.Update(gameTime);
+                obj.Update(gameTime);
             }
 
             // TODO: Add your update logic here
@@ -95,9 +108,9 @@ namespace AprendendoMonegame_1
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             _spriteBatch.Begin();
-            foreach (Sprite sprite in instanceManager)
+            foreach (Object obj in instanceManager)
             {
-                sprite.Draw(_spriteBatch);
+                obj.Draw();
             }
             _spriteBatch.End();
 
