@@ -1,0 +1,1 @@
+﻿DONE Um gerenciador de instancias, assim posso iterar num for esses updates, draws e etc na classe principal, só incrementar agora
