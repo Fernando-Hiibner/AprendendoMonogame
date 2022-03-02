@@ -56,6 +56,8 @@ namespace AprendendoMonogame_1
                     Alias = "Player 1",
 
                     Speed = 200f,
+                    PrefabControllerType = Player.PrefabControllerTypes.DirectionBasedTopDown,
+                    
                     ContainType = Object2D.ContainTypes.Contain,
 
                     Texture = DefaultTextures.Triangle,
@@ -78,7 +80,9 @@ namespace AprendendoMonogame_1
                 {
                     Alias = "Player 2",
 
-                    Speed = 30f,
+                    Speed = 100f,
+                    PrefabControllerType = Player.PrefabControllerTypes.EightDirectionsTopDown,
+
                     ContainType = Object2D.ContainTypes.Warp,
 
                     Texture = DefaultTextures.Circle,
